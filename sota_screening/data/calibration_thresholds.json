@@ -1,0 +1,7 @@
+{
+  "auto_clear": 0.35,
+  "review": 0.65,
+  "auto_hit": 0.9,
+  "metrics_f1": 0.4,
+  "metrics_review_rate": 0.6666666666666666
+}

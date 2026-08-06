@@ -1,0 +1,29 @@
+case_id,name,dob,nationality,expected_alert,top_k
+C001,Tariq Al-Hashimi,1985-04-12,Yemen,ALERT,3
+C002,طارق الهاشمي,1985-04-12,اليمن,ALERT,3
+C003,Tarik Al Hashimi,1985-04-12,Yemen,ALERT,3
+C004,Tariq Al-Hashimi,1999-12-31,Morocco,NO_ALERT,3
+C005,طارق الهاشمي,1997-01-01,المغرب,NO_ALERT,3
+C006,Khalid Mansur,1979-09-22,Syria,ALERT,3
+C007,Completely Different Person,2000-01-01,Canada,NO_ALERT,3
+C008,Nabil Rahman,1975-11-03,Sudan,ALERT,3
+C009,نبيل رحمن,1975-11-03,السودان,ALERT,3
+C010,Nabeel Rahman,1975-11-03,Sudan,ALERT,3
+C011,Nabil Rahman,1994-10-10,France,NO_ALERT,3
+C012,Hassan Al-Karim,1990-07-29,Libya,ALERT,3
+C013,حسن الكريم,1990-07-29,ليبيا,ALERT,3
+C014,Hasan Karim,1990-07-29,Libya,ALERT,3
+C015,Hassan Al-Karim,2001-01-21,Tunisia,NO_ALERT,3
+C016,Faris Jabr,1988-03-14,Jordan,ALERT,3
+C017,فارس جبر,1988-03-14,الأردن,ALERT,3
+C018,Fares Jabr,1988-03-14,Jordan,ALERT,3
+C019,Faris Jabr,1999-03-14,Saudi Arabia,NO_ALERT,3
+C020,Samir Qadri,1982-01-18,Iraq,ALERT,3
+C021,سمير القادري,1982-01-18,العراق,ALERT,3
+C022,Sameer Qadri,1982-01-18,Iraq,ALERT,3
+C023,Samir Qadri,1995-06-06,Oman,NO_ALERT,3
+C024,Khaled Mansour,1979-09-22,Syria,ALERT,3
+C025,خالد منصور,1979-09-22,سوريا,ALERT,3
+C026,Khaled Mansour,1992-04-04,Lebanon,NO_ALERT,3
+C027,Ramy Fadel,1986-08-20,Egypt,NO_ALERT,3
+C028,طارق الهاشمى,1985-04-12,اليمن,ALERT,3

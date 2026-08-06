@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -20%, #dbeafe 0%, rgba(219, 234, 254, 0) 55%),
+    radial-gradient(1000px 600px at 90% -10%, #e0e7ff 0%, rgba(224, 231, 255, 0) 50%),
+    #f8fafc;
+  color: #0f172a;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 28px auto 42px auto;
+  padding: 0 14px;
+}
+
+.hero {
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  margin: 4px 0;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.sub {
+  margin-top: 0;
+  color: #334155;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(4px);
+}
+
+h2 {
+  margin: 0 0 8px 0;
+}
+
+.hint {
+  margin: 0 0 12px 0;
+  color: #475569;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #1e293b;
+  font-weight: 600;
+  gap: 6px;
+}
+
+input,
+textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 11px;
+  font-size: 14px;
+  background: #fff;
+  color: #0f172a;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+}
+
+textarea {
+  width: 100%;
+  min-height: 170px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  color: #fff;
+  padding: 10px 14px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 100ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+button:hover {
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+pre {
+  margin: 0;
+  background: #0b1220;
+  color: #dbeafe;
+  border-radius: 10px;
+  padding: 14px;
+  overflow: auto;
+  min-height: 220px;
+  border: 1px solid #1e293b;
+}
+
+@media (max-width: 680px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}

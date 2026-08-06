@@ -1,0 +1,22 @@
+entity_id,name,first_name,middle_name,last_name,dob,residency,nationality,aliases,relative_names,gender,risk_level
+M001,Hassan Mahmoud Al-Karim,Hassan,Mahmoud,Al-Karim,1981-05-07,Jordan,Jordan,Abu Ali|حسن الكريم,Ali Hassan|Layla Hassan,male,high
+M002,حسن محمود الكريم,حسن,محمود,الكريم,1981-05-07,الأردن,الأردن,Abu Ali|Hassan Al-Karim,علي حسن|ليلى حسن,male,high
+M003,Noor Sameer Darwish,Noor,Sameer,Darwish,1990-11-20,Egypt,Egypt,Nour Darwish|نور درويش,Mona Darwish,female,medium
+M004,Nour Samir Darwish,Nour,Samir,Darwish,1991-01-14,Egypt,Egypt,Nour D|نور سمير درويش,Mona Darwish,female,medium
+M005,نور سمير درويش,نور,سمير,درويش,1991-01-14,مصر,مصر,Nour Samir Darwish|نور درويش,منى درويش,female,medium
+M006,Karim Nabil Mansour,Karim,Nabil,Mansour,1984-03-09,Syria,Syria,Abu Nabil|كريم منصور,Samer Karim|Lina Karim,male,high
+M007,كريم نبيل منصور,كريم,نبيل,منصور,1984-03-09,سوريا,سوريا,Karim Nabil Mansour|كريم منصور,سامر كريم|لينا كريم,male,high
+M008,Omar Hadi Qadri,Omar,Hadi,Qadri,1978-12-02,Iraq,Iraq,Abu Hadi|عمر القادري,Hadi Omar,male,high
+M009,عمر هادي القادري,عمر,هادي,القادري,1978-12-02,العراق,العراق,Omar Hadi Qadri|عمر القادري,هادي عمر,male,high
+M010,Layla Fadi Shalabi,Layla,Fadi,Shalabi,1993-06-18,Jordan,Jordan,Laila Shalabi|ليلى شلبي,Rami Shalabi,female,medium
+M011,ليلى فادي شلبي,ليلى,فادي,شلبي,1993-06-18,الأردن,الأردن,Layla Fadi Shalabi|ليلى شلبي,رامي شلبي,female,medium
+M012,Yousef Aziz Hammoud,Yousef,Aziz,Hammoud,1987-08-27,Libya,Libya,يوسف حمود|Yusuf Hamoud,Aziz Yousef,male,high
+M013,يوسف عزيز حمود,يوسف,عزيز,حمود,1987-08-27,ليبيا,ليبيا,Yousef Aziz Hammoud|يوسف حمود,عزيز يوسف,male,high
+M014,Samir Rahman Qattan,Samir,Rahman,Qattan,1980-09-30,Morocco,Morocco,Samir Kattan|سمير قطن,Nabil Samir,male,high
+M015,سمير رحمن قطان,سمير,رحمن,قطان,1980-09-30,المغرب,المغرب,Samir Rahman Qattan|سمير قطان,نبيل سمير,male,high
+M016,Huda Karim Nadim,Huda,Karim,Nadim,1995-02-11,Sudan,Sudan,Houda Nadim|هدى نديم,Karim Huda,female,medium
+M017,هدى كريم نديم,هدى,كريم,نديم,1995-02-11,السودان,السودان,Huda Karim Nadim|هدى نديم,كريم هدى,female,medium
+M018,Anwar Imad Al-Yafi,Anwar,Imad,Al-Yafi,1976-04-23,Yemen,Yemen,Anwar Yafi|أنور اليافي,Imad Anwar,male,high
+M019,أنور عماد اليافي,أنور,عماد,اليافي,1976-04-23,اليمن,اليمن,Anwar Imad Al-Yafi|أنور اليافي,عماد أنور,male,high
+M020,Rami Bashir Saad,Rami,Bashir,Saad,1989-10-05,Egypt,Egypt,Rami S.|رامي سعد,Bashir Rami,male,medium
+M021,رامي بشير سعد,رامي,بشير,سعد,1989-10-05,مصر,مصر,Rami Bashir Saad|رامي سعد,بشير رامي,male,medium

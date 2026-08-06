@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Screening Studio</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="eyebrow">AML Sandbox</p>
+        <h1>Name Screening Studio</h1>
+        <p class="sub">Test Arabic/English name screening with weighted fields and alias-aware matching.</p>
+      </header>
+
+      <section class="card">
+        <h2>Single Screening</h2>
+        <p class="hint">Use either full name or split fields. Leave unknown fields empty.</p>
+        <div class="grid">
+          <label>Full Name (optional) <input id="name" placeholder="e.g. Abu Ali" /></label>
+          <label>First Name <input id="firstName" placeholder="e.g. Hassan" /></label>
+          <label>Middle Name <input id="middleName" placeholder="e.g. Mahmoud" /></label>
+          <label>Last Name <input id="lastName" placeholder="e.g. Al-Karim" /></label>
+          <label>DOB <input id="dob" placeholder="YYYY-MM-DD or UNKNOWN" /></label>
+          <label>Residency <input id="residency" placeholder="e.g. Jordan / الأردن" /></label>
+          <label>Nationality (legacy) <input id="nationality" placeholder="Optional fallback" /></label>
+          <label>Aliases (comma or | separated) <input id="aliases" placeholder="Abu Ali, حسن الكريم" /></label>
+          <label>Relative Names (comma or | separated) <input id="relativeNames" placeholder="Ali Hassan | Mona Darwish" /></label>
+          <label>Gender <input id="gender" placeholder="male / female / unknown" /></label>
+          <label>Top K <input id="topk" type="number" min="1" max="10" placeholder="3" /></label>
+        </div>
+        <button id="screenBtn">POST /screen</button>
+      </section>
+
+      <section class="card">
+        <h2>Batch Screening (JSON Array)</h2>
+        <p class="hint">Paste a JSON array of `ScreenRequest` objects.</p>
+        <textarea id="batchPayload" rows="8" placeholder='[
+  {"name":"Abu Ali","dob":"1981-05-07","residency":"Jordan","aliases":["Abu Ali"],"relative_names":["Ali Hassan"],"gender":"male","top_k":3},
+  {"first_name":"Noor","middle_name":"Sameer","last_name":"Darwish","dob":"1990-11-20","residency":"Egypt","gender":"female","top_k":3}
+]'></textarea>
+        <button id="batchBtn">POST /screen/batch</button>
+      </section>
+
+      <section class="card actions">
+        <button id="healthBtn">GET /health</button>
+        <button id="rebuildBtn">POST /index/rebuild</button>
+      </section>
+
+      <section class="card">
+        <h2>Response</h2>
+        <pre id="output">Ready. Submit a request to view API output.</pre>
+      </section>
+    </main>
+    <script src="/web/app.js"></script>
+  </body>
+  </html>

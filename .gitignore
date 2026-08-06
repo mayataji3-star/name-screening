@@ -1,0 +1,49 @@
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+# Generated index, metadata, audit trail
+artifacts/
+sota_screening/data/artifacts/
+sota_screening/data/feedback_log.jsonl
+*.faiss
+*.jsonl
+
+# Local data that regenerates on first run
+data/watchlist_neo4j.csv
+data/entities.ftm.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# Logs & temp
+*.log
+logs/
+*.tmp
+*.bak
+
+# OS & editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+.cursor/
+*.swp

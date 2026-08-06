@@ -1,0 +1,13 @@
+entity_id,name,dob,nationality,aliases,risk_level
+E001,Tariq Ibrahim Al-Hashimi,1985-04-12,Yemen,"طارق إبراهيم الهاشمي|Tariq Al-Hashimi",high
+E002,طارق إبراهيم الهاشمي,1985-04-12,اليمن,"Tariq Ibrahim Al-Hashimi|طارق الهاشمي",high
+E003,Khaled Mahmoud Mansour,1979-09-22,Syria,"خالد محمود منصور|Khaled Mansour",high
+E004,خالد محمود منصور,1979-09-22,سوريا,"Khaled Mahmoud Mansour|خالد منصور",high
+E005,Samir Saleh Qadri,1982-01-18,Iraq,"سمير صالح القادري|Samir Qadri",high
+E006,سمير صالح القادري,1982-01-18,العراق,"Samir Saleh Qadri|سمير القادري",high
+E007,Nabil Yassin Rahman,1975-11-03,Sudan,"نبيل ياسين رحمن|Nabil Rahman",high
+E008,نبيل ياسين رحمن,1975-11-03,السودان,"Nabil Yassin Rahman|نبيل رحمن",high
+E009,Hassan Rashid Al-Karim,1990-07-29,Libya,"حسن رشيد الكريم|Hassan Al-Karim",high
+E010,حسن رشيد الكريم,1990-07-29,ليبيا,"Hassan Rashid Al-Karim|حسن الكريم",high
+E011,Faris Hamdan Jabr,1988-03-14,Jordan,"فارس حمدان جبر|Faris Jabr",high
+E012,فارس حمدان جبر,1988-03-14,الأردن,"Faris Hamdan Jabr|فارس جبر",high
