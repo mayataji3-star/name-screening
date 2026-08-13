@@ -216,6 +216,8 @@ def main() -> None:
             print(
                 "Brute-force only:",
                 sorted(
+
+        
                     difference.brute_force_only_ids
                 ),
             )
