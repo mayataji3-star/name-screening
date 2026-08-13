@@ -8,3 +8,4 @@ pytest
 torch
 transformers>=4.46.0
 accelerate>=0.34.0
+
