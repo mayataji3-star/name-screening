@@ -4,18 +4,22 @@ from dataclasses import dataclass
 from typing import Iterable, Protocol
 
 from rapidfuzz import fuzz
-
-from .normalization import normalize_name
+from .normalization import name_comparison_forms
 from .phonetics import phonetic_keys, transliterate_to_latin
 
 
 @dataclass(frozen=True)
 class WatchlistRecord:
-    """One simplified watchlist record."""
+    """One watchlist record."""
 
     record_id: str
     name: str
     aliases: tuple[str, ...] = ()
+    dob: str = ""
+    residency: str = ""
+    nationality: str = ""
+    relative_names: tuple[str, ...] = ()
+    gender: str = ""
 
 
 @dataclass(frozen=True)
@@ -46,12 +50,11 @@ class SemanticRetrieverProtocol(Protocol):
 
 def lexical_similarity(left: str, right: str) -> float:
     """Return fuzzy similarity between two names from 0 to 100."""
-    left_normalized = normalize_name(left)
-    right_normalized = normalize_name(right)
 
-    normalized_score = fuzz.token_set_ratio(
-        left_normalized,
-        right_normalized,
+    normalized_score = max(
+        fuzz.token_set_ratio(left_form, right_form)
+        for left_form in name_comparison_forms(left)
+        for right_form in name_comparison_forms(right)
     )
 
     left_latin = transliterate_to_latin(left)
@@ -68,7 +71,6 @@ def lexical_similarity(left: str, right: str) -> float:
             transliterated_score,
         )
     )
-
 
 def has_phonetic_overlap(left: str, right: str) -> bool:
     """Return True when two names share a phonetic key."""

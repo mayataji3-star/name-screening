@@ -60,13 +60,20 @@ def load_watchlist(
             if not record_id or not name:
                 continue
 
-            records.append(
-                WatchlistRecord(
-                    record_id=record_id,
-                    name=name,
-                    aliases=aliases,
-                )
-            )
+        records.append(
+    WatchlistRecord(
+        record_id=record_id,
+        name=name,
+        aliases=aliases,
+        dob=row.get("dob", "").strip(),
+        residency=row.get("residency", "").strip(),
+        nationality=row.get("nationality", "").strip(),
+        relative_names=split_pipe_values(
+            row.get("relative_names", "")
+        ),
+        gender=row.get("gender", "").strip(),
+    )
+)
 
     if not records:
         raise ValueError(

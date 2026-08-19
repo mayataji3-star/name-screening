@@ -98,7 +98,6 @@ def _canonicalize_latin_spelling(value: str) -> str:
         ("ph", "f"),
         ("kh", "x"),
         ("gh", "g"),
-        ("sh", "c"),
         ("th", "t"),
         ("dh", "d"),
         ("ou", "u"),

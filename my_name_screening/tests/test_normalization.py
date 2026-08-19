@@ -1,6 +1,6 @@
 import pytest
 
-from my_name_screening.normalization import normalize_name
+from my_name_screening.normalization import name_comparison_forms, normalize_name
 
 
 def test_removes_arabic_diacritics() -> None:
@@ -52,3 +52,16 @@ def test_normalizes_abd_al_particle() -> None:
 def test_rejects_non_string_input() -> None:
     with pytest.raises(TypeError):
         normalize_name(123)  # type: ignore[arg-type]
+
+def test_name_comparison_forms_remove_al() -> None:
+    assert normalize_name("Al Hashim") == "al hashim"
+
+    assert name_comparison_forms("Al Hashim") == (
+        "al hashim",
+        "hashim",
+    )
+
+    assert name_comparison_forms("الهاشم") == (
+        "الهاشم",
+        "هاشم",
+    )

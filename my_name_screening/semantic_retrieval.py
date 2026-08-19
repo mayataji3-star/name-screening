@@ -36,6 +36,7 @@ class SemanticRetriever:
         self.embeddings: np.ndarray | None = None
 
     def build_index(
+        
         self,
         watchlist: list[WatchlistRecord],
     ) -> None:

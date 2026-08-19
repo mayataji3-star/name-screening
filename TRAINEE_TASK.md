@@ -109,7 +109,7 @@ Recall matters more than precision here — a candidate you never retrieve can n
 - Groq is an inference provider for open models (Llama, Qwen, GPT-OSS families) and is *fast*, which matters when you're adjudicating 20 candidates per query. Check the current model list in the console and pick one that supports **JSON / structured output**; document why you chose it.
 - Send the LLM **only the top-N candidates** (5–10), one pair at a time or in a small batch — never the whole watchlist. Cost and latency are part of the design.
 - Prompt contract:
-  - system prompt states the task (same real-world person? yes/no + confidence), the domain rules (transliteration variance is normal; missing fields are *not* evidence of mismatch; contradictions reduce the score), and a strict JSON schema
+  - system prompt states the task (same real-world person? yes/no + confidence), the domain rules (transliteration variance is normal; missing fields are *not* evidence of mismatch; contradictiSAons reduce the score), and a strict JSON schema
   - `temperature=0` for reproducibility
   - required output: `{"same_person_score": 0.0-1.0, "verdict": "MATCH|POSSIBLE|NO_MATCH", "reason": "<one grounded sentence>", "signals": {"name": "...", "dob": "...", "geo": "..."}}`
   - validate with Pydantic; retry once on malformed JSON; on repeated failure **fall back to the deterministic score and log that the LLM was unavailable** — the service must never break because Groq had a bad minute

@@ -26,6 +26,40 @@ _ARABIC_LETTER_MAP = str.maketrans(
 
 _MULTI_SPACE_RE = re.compile(r"\s+")
 
+_ARABIC_DEFINITE_ARTICLE_RE = re.compile(
+    r"(?<!\S)ال(?=[\u0621-\u063A\u0641-\u064A]{2,})"
+)
+
+_LATIN_NAME_ARTICLE_RE = re.compile(
+    r"\bal\s+(?=[a-z])"
+)
+
+def name_comparison_forms(value: str) -> tuple[str, ...]:
+    """Return original and particle-insensitive comparison forms."""
+    normalized = normalize_name(value)
+
+    without_name_articles = _ARABIC_DEFINITE_ARTICLE_RE.sub(
+        "",
+        normalized,
+    )
+
+    # Remove separated article: al taji → taji
+    without_name_articles = _LATIN_NAME_ARTICLE_RE.sub(
+        "",
+        without_name_articles,
+    )
+
+    # Remove attached article: altaji/eltaji → taji
+    without_name_articles = _ATTACHED_LATIN_NAME_ARTICLE_RE.sub(
+        "",
+        without_name_articles,
+    )
+
+    return tuple(
+        dict.fromkeys(
+            (normalized, without_name_articles)
+        )
+    )
 
 def _replace_punctuation_with_spaces(value: str) -> str:
     """Replace punctuation and symbols with spaces."""
@@ -43,6 +77,13 @@ def _replace_punctuation_with_spaces(value: str) -> str:
 
     return "".join(characters)
 
+_LATIN_NAME_ARTICLE_RE = re.compile(
+    r"\bal\s+(?=[a-z])"
+)
+
+_ATTACHED_LATIN_NAME_ARTICLE_RE = re.compile(
+    r"\b(?:al|el)(?=[a-z]{3,}\b)"
+)
 
 def _normalize_latin_particles(value: str) -> str:
     """Standardize common Latin-written Arabic name particles."""
@@ -100,3 +141,24 @@ def normalize_name(value: str) -> str:
     text = _MULTI_SPACE_RE.sub(" ", text).strip()
 
     return text
+
+
+def name_comparison_forms(value: str) -> tuple[str, ...]:
+    """Return original and particle-insensitive comparison forms."""
+    normalized = normalize_name(value)
+
+    without_name_articles = _ARABIC_DEFINITE_ARTICLE_RE.sub(
+        "",
+        normalized,
+    )
+
+    without_name_articles = _LATIN_NAME_ARTICLE_RE.sub(
+        "",
+        without_name_articles,
+    )
+
+    return tuple(
+        dict.fromkeys(
+            (normalized, without_name_articles)
+        )
+    )
